@@ -1,3 +1,5 @@
+//I SUCK AT JS SO LIKE 60% OF THIS WAS CHATGPT
+
 document.getElementById("buttonD").addEventListener("click", () => {
   changeColors("dem", ["rep", "ind"], "#0057CE", "#adbfff", "#0043a0", "Dfavicon.png");
 });
@@ -11,12 +13,12 @@ document.getElementById("buttonI").addEventListener("click", () => {
 });
 
 function changeColors(classToShow, classesToHide, mainColor, secondColor, thirdColor, faviconPath) {
-  // Change the CSS variables for the colors
+
   document.documentElement.style.setProperty('--main', mainColor);
   document.documentElement.style.setProperty('--second', secondColor);
   document.documentElement.style.setProperty('--third', thirdColor);
 
-  // Show the selected class and hide the others
+
   document.querySelector(`.${classToShow}`).style.display = "block";
   classesToHide.forEach(className => {
     document.querySelector(`.${className}`).style.display = "none";
@@ -30,11 +32,11 @@ function changeColors(classToShow, classesToHide, mainColor, secondColor, thirdC
     const wrapper = document.querySelector(".wrapper");
     wrapper.classList.add("fade-out");
 
-    // Hide the wrapper after the fade-out animation (0.2 seconds)
+
     setTimeout(() => {
       wrapper.style.display = "none";
-    }, 200); // 0.2 seconds for the fade-out animation
-  }, 200); // 1-second delay before fading out
+    }, 200);
+  }, 200);
 
   updateFavicon(faviconPath);
 }
@@ -50,7 +52,6 @@ function updateFavicon(faviconPath) {
 // Select the image element
 const cycleImage = document.getElementById('cycleImage');
 
-// Define an array of image sources to cycle through
 const imageSources = ['dpa.png', 'rpa.png', 'ipa.png'];
 let currentIndex = 0;
 
