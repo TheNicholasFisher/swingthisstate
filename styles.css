@@ -430,6 +430,7 @@ a:hover{
 
 .inquire:hover{
     border: 2px solid var(--third);
+    cursor: not-allowed;
 }
 
 .doto{
